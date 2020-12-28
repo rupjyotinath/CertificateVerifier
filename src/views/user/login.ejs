@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%= pageHeading %> | <%= siteName %></title>
+        <link rel="stylesheet" type="text/css" href="/css/style.css">
+    </head>
+    <body>
+        <div class="center">
+            <% if(error){ %>
+                <h3 style="color: red;"><%= error %></h3>
+            <% } %>
+            <h2>Login</h2>
+            <hr>
+            <br>
+            <form action="/login" method="POST">
+                <label for="email">Email</label><br>
+                <input type="email" name="email" id="email" placeholder="Enter Email">
+                <br>
+                <label for="password">Password</label><br>
+                <input type="password" name="password" id="password" placeholder="Type Password">
+                <br>
+                <button type="submit">LOGIN</button>
+            </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%= pageHeading %> | <%= siteName %></title>
+        <link rel="stylesheet" type="text/css" href="/css/style.css">
+    </head>
+    <body>
+        <div class="center bordered">
+            <% if(error){ %>
+                <h3 style="color: red;"><%= error %></h3>
+            <% } %>
+            <h2>Certificate Details</h2>
+            <h3>Certificate ID: <%= certificate._id %></h3>
+            <hr>
+            <br>
+            <p>
+                Name: <span><%= certificate.name %></span>
+            </p>
+            <p>
+                Certificate Purpose: <span><%= certificate.purpose %></span>
+            </p>
+            <p>
+                College/Organization: <span><%= certificate.organization %></span>
+            </p>
+            <p>
+                Details: <span><%= certificate.details %></span>
+            </p>
+            <p>
+                Period: <span><%= certificate.start.toDateString() %>  - <%= certificate.end.toDateString() %></span>
+            </p>
+            <br>
+            <% if(locals.user){ %>
+                <a href="/certificates/<%= certificate._id %>/edit">EDIT</a>
+                <br>
+                <a href="/certificates/new">NEW</a>
+                <br>
+                <a href="/logout">LOGOUT</a>
+            <% } %>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%= pageHeading %> | <%= siteName %></title>
+        <link rel="stylesheet" type="text/css" href="/css/style.css">
+    </head>
+    <body>
+        <div class="center">
+            <% if(error){ %>
+                <h3 style="color: red;"><%= error %></h3>
+            <% } %>
+            <h2>Verify Certificate</h2>
+            <br>
+            <br>
+            <form action="/verify" method="GET">
+                <input type="text" name="certificate-id" id="certificate-id" placeholder="Enter Certificate ID">
+                <button type="submit">SUBMIT</button>
+            </form>
+
+            <br>
+            <% if(!locals.user){ %>
+            <a href="/login">SIGN IN</a>
+            <% }else{ %>
+            <br>
+            <a href="/certificates/new">NEW</a>
+            <br>
+            <a href="/logout">LOGOUT</a>
+            <% } %>
+        </div>
+    </body>
+</html>

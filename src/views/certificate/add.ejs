@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%= pageHeading %> | <%= siteName %></title>
+        <link rel="stylesheet" type="text/css" href="/css/style.css">
+    </head>
+    <body>
+        <div class="center bordered">
+            <h2>Issue New Certificate</h2>
+            <hr>
+            <br>
+            <form action="/certificates" method="POST">
+                <label for="name">Name</label><br>
+                <input type="text" name="name" id="name" placeholder="NAME of Applicant">
+                <label for="email">Email</label><br>
+                <input type="email" name="email" id="email" placeholder="Email of Applicant">
+                <br>
+                <label for="purpose">Certificate Purpose</label><br>
+                <input type="text" name="purpose" id="purpose" placeholder="Certificate Purpose / Name">
+                <br>
+                <label for="organization">College/Organization</label><br>
+                <input type="text" name="organization" id="organization" placeholder="College/Organization Name">
+                <br>
+                <label for="details">Details</label><br>
+                <textarea name="details" id="details" cols="30" rows="10" placeholder="Details of Certification"></textarea>
+                <br>
+                <label for="start">Start Date:</label>
+                <input type="date" name="start" id="start">
+                <label for="end">End Date:</label>
+                <input type="date" name="end" id="end">
+                <br>
+                <button type="submit">SUBMIT</button>
+            </form>
+            <br>
+            <a href="/logout">LOGOUT</a>
+        </div>
+    </body>
+</html>

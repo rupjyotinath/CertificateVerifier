@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%= pageHeading %> | <%= siteName %></title>
+        <link rel="stylesheet" type="text/css" href="/css/style.css">
+    </head>
+    <body>
+        <div class="center bordered">
+            <h2>Edit Certificate</h2>
+            <hr>
+            <br>
+            <form action="/certificates/<%= certificate._id %>?_method=PUT" method="POST">
+                <label for="name">Name</label><br>
+                <input type="text" name="name" id="name" placeholder="NAME of Applicant" value="<%= certificate.name %>">
+                <br>
+                <label for="purpose">Certificate Purpose</label><br>
+                <input type="text" name="purpose" id="purpose" placeholder="Certificate Purpose / Name" value="<%= certificate.purpose %>" >
+                <br>
+                <label for="organization">College/Organization</label><br>
+                <input type="text" name="organization" id="organization" placeholder="College/Organization Name" value="<%= certificate.organization %>" >
+                <br>
+                <label for="details">Details</label><br>
+                <textarea name="details" id="details" cols="30" rows="10" placeholder="Details of Certification"><%= certificate.details %></textarea>
+                <br>
+                <label for="start">Start Date:</label>
+                <input type="date" name="start" id="start" value=<%= certificate.start.toISOString().split('T')[0] %> >
+                <label for="end">End Date:</label>
+                <input type="date" name="end" id="end" value=<%= certificate.end.toISOString().split('T')[0] %> >
+                <br>
+                <button type="submit">SUBMIT</button>
+            </form>
+
+            <br>
+            <a href="/certificates/new">NEW</a>
+            <br>
+            <a href="/logout">LOGOUT</a>
+        </div>
+    </body>
+</html>

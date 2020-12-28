@@ -1,0 +1,33 @@
+{
+  "name": "certificateverifier",
+  "version": "1.0.0",
+  "description": "App to create and verify issued certificates",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "verify",
+    "certificate"
+  ],
+  "author": "Rupjyoti Nath",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.816.0",
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^3.2.0",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
+    "email-validator": "^2.0.4",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "html-pdf": "^2.2.0",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.11.8",
+    "nodemailer": "^6.4.17",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0"
+  }
+}

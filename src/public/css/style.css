@@ -1,0 +1,21 @@
+.center {
+    margin:auto;
+    width: 55%;
+    text-align: center;
+}
+
+.bordered {
+    border-left: 20px solid grey;
+}
+
+form{
+    margin: auto;
+    padding: auto;
+}
+
+form input{
+    margin-bottom: 10px;
+}
+span{
+    font-weight: bold;
+}
