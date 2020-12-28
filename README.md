@@ -8,7 +8,7 @@ Note that even if the pdf & email part is handled by a different microservice as
 Pdf copy doesn't get stored anywhere in the disk. It's because it's not needed. A stream is generated & passed to nodemailer directly to email it.
 
 Here is a certificate that has been generated & emailed,
-![certificate](screenshots/15.png)
+![certificate](screenshots/certificate.png)
 A pdf copy is included in "sample-certificate" folder.
 
 
