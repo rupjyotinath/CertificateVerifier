@@ -9,37 +9,8 @@ Pdf copy doesn't get stored anywhere in the disk. It's because it's not needed. 
 
 Here is a certificate that has been generated & emailed,
 ![certificate](screenshots/certificate.png)
+
 A pdf copy is included in "sample-certificate" folder.
-
-
-Here are the intermediate steps followed while generating the above certificate. (By this microservice)
-
-
-![certificate](screenshots/2.png)
-![certificate](screenshots/3.png)
-![certificate](screenshots/4.png)
-![certificate](screenshots/5.png)
-Note: The email field of intern is not seen above because for testing purpose, a fixed email was used. However it has been changed before commiting the code to GitHub.
-
-![certificate](screenshots/6.png)
-
-
-The screenshots of the part handled by the pdf-email microservice.
-
-![certificate](screenshots/12.png)
-![certificate](screenshots/13.png)
-![certificate](screenshots/14.png)
-The completely downloaded copy of this is shown in the first screenshot.
-
-Other screenshots of this "CertificateVerifier" microservice, (without signing in)
-
-The verification cum homepage,
-![certificate](screenshots/1.png)
-![certificate](screenshots/8.png)
-![certificate](screenshots/9.png)
-![certificate](screenshots/10.png)
-Verification of a certificate
-![certificate](screenshots/11.png)
 
 
 ## Why two Microservices using Queue?
@@ -99,6 +70,38 @@ Only the created user can issue & edit certificates.
 Anyone can verify a certificate, provided a valid Certificate ID.
 
 As mentioned, this microservice is responsible only for generating & verifying certificates. The pdf creation & emailing is handled by a different one. So, the other project needs to be configured to generate a pdf & send emails.
+
+
+## More Screenshots
+Here are the intermediate steps followed while generating the certificate shown above in introduction. (By this microservice)
+
+
+![certificate](screenshots/2.png)
+![certificate](screenshots/3.png)
+![certificate](screenshots/4.png)
+![certificate](screenshots/5.png)
+Note: The email field of intern is not seen above because for testing purpose, a fixed email was used. However it has been changed before commiting the code to GitHub.
+
+![certificate](screenshots/6.png)
+
+
+The screenshots of the part handled by the pdf-email microservice.
+
+![certificate](screenshots/12.png)
+![certificate](screenshots/13.png)
+![certificate](screenshots/14.png)
+The completely downloaded copy of this is shown in the first screenshot.
+
+Other screenshots of this "CertificateVerifier" microservice, (without signing in)
+
+The verification cum homepage,
+![certificate](screenshots/1.png)
+![certificate](screenshots/8.png)
+![certificate](screenshots/9.png)
+![certificate](screenshots/10.png)
+Verification of a certificate
+![certificate](screenshots/11.png)
+
 
 ## Notes/Improvements
 * Can be quickly modified to issue other kind of certificates , example- workshop or attending a webinar, etc.
